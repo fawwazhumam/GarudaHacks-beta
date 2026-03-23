@@ -34,9 +34,7 @@ export default function Navbar({ className = " " }: { className?: string }) {
           <div className="flex items-center justify-between h-14 md:h-[58px]">
             <div className="flex items-center justify-center gap-6">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center">
-                  <image></image>
-                </div>
+                <div className="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center"></div>
               </div>
 
               <div className="hidden md:flex items-center gap-2">
