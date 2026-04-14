@@ -1,0 +1,44 @@
+import Image from "next/image";
+
+export default function SectionAboutUs() {
+  return (
+    <section id="about" className="bg-[#F9F5FF] border-b border-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border border-r-[#C4A9FF] border-l-[#C4A9FF]">
+        <div className="flex flex-col border border-r-[#C4A9FF] border-l-[#C4A9FF] md:flex-row gap-6 items-start px-6 py-[60px] md:py-[80px] lg:py-[120px]">
+   
+          <div className="border border-[#C4A9FF] rounded-lg p-3 flex items-center justify-center relative shrink-0 self-center md:self-auto w-full md:w-auto md:min-w-[260px] lg:min-w-[365px] shadow-[inset_2px_4px_18px_0px_rgba(196,169,255,0.64)]">
+            <div className="flex items-center justify-center overflow-hidden w-[160px] h-[160px] md:w-[200px] md:h-[200px] lg:w-[264px] lg:h-[264px]">
+              <Image
+                src="/image/GambarLogoGaruda.png"
+                alt="Garuda Hacks Logo"
+                width={264}
+                height={264}
+                className="object-contain w-full h-full"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2 flex-1 justify-center">
+            <div className="px-3 py-2">
+              <h2 className="font-['Montserrat',sans-serif] font-medium text-[#221139] text-[20px] md:text-[26px] lg:text-[32px] leading-snug">
+                Garuda Hacks is Southeast Asia's largest hackathon, with over{" "}
+                <span className="font-bold">6000 total participants.</span>
+              </h2>
+            </div>
+            <div className="px-3 py-1">
+              <p className="font-['Montserrat',sans-serif] font-medium text-[#221139] text-[13px] md:text-[15px] lg:text-[16px] text-justify leading-relaxed">
+                We are a 501c3 nonprofit dedicated to empowering young Indonesians with the skills
+                and motivation to solve the country's most urgent issues. Despite their skill and
+                ideas, many talented programmers lack the resources to succeed in the job market as
+                a result, we began our organization in 2020, launching our first hackathon online.
+                Since then, we have hosted SEA's largest hackathons for five years consecutively and
+                have helped thousands of students develop in both computer science and
+                entrepreneurship.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

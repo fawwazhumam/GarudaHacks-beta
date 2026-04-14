@@ -1,13 +1,20 @@
-import Navbar from "@/components/Navbar";
-import CommentsBar from "@/sections/Comments";
+import Countdown from "@/sections/Countdown";
+import CubePattern from "@/sections/CubePattern";
+import Footer from "@/sections/Footer";
+import Navbar from "@/sections/Navbar";
+import SectionAboutUs from "@/sections/SectionAboutUs";
 import Heroes from "@/sections/Heroes";
 
 export default function Home() {
   return (
-    <div className="min-h-screen dotBg">
+    <div className="bg-[#F9F5FF] min-h-screen relative overflow-x-hidden">
+      <CubePattern />
+ 
       <Navbar />
       <Heroes />
-      <CommentsBar />
+      <Countdown />
+      <SectionAboutUs />
+      <Footer />
     </div>
   );
 }

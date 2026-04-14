@@ -1,30 +1,37 @@
-import { stat } from "fs";
-import Link from "next/link";
-
-export default function Heroes({ className = " " }: { className?: string }) {
+export default function Heroes() {
   return (
-    <section className="w-full bg-[#F9F5FF] ${className}">
-      <div className="max-w-[1216px] dotBg border-r-2 border-l-2 border-pink-100 mx-auto px-5 md:px-8">
-        <div className="flex flex-col items-center text-center bg-[#F9F5FF] border-r-2 border-l-2 border-pink-100 pt-24 md:pt-32 pb-14 md:pb-20 gap-5 md:gap-6">
-          <h1 className="font-['Plus_Jakarta_Sans', sans-serif] font-semibold text-pink-500 leading-[1.08] tracking-[-0.03em] mx-w-[680px] text-[40px] sm:text-[52px] md:text-[60px]">
-            Garuda Hacks<span className="text-pink-600">7.0</span>
-          </h1>
+    <section className="bg-[#F9F5FF] border-b border-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border border-r-[#C4A9FF] border-l-[#C4A9FF]">
+        <div className="flex flex-col items-center border border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center py-6 px-6 pt-[60px] md:pt-[80px] lg:pt-[120px] pb-[60px] md:pb-[80px] lg:pb-[100px] gap-6">
 
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-gray-600 leading-relaxed max-w-[480px]">
-            Be part of Indonesia&apos;s Largest Hackathon
-          </p>
+          <div className="flex items-center justify-center px-3 py-2">
+            <h1 className="font-['Montserrat',sans-serif] font-bold text-[#221139] text-[40px] md:text-[60px] lg:text-[80px] leading-none whitespace-nowrap">
+              Garuda Hacks 6.0
+            </h1>
+          </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-2.5 pt-1">
-            <Link
-              href="/explore"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-800 text-[16px] font-semibold rounded-lg hover:bg-gray-100 transition-all font-['Plus-Jakarta_Sans,sans-serif]">
-              Hand Book
-            </Link>
-            <Link
-              href="/explore"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-800 text-[16px] font-semibold rounded-lg hover:bg-gray-100 transition-all font-['Plus-Jakarta_Sans,sans-serif]">
+          <div className="flex flex-col items-center gap-0">
+            <p className="font-['Montserrat',sans-serif] font-medium text-[#221139] text-[13px] md:text-[16px] text-center">
+              July 24 - 26 | 2026 at Universitas Multimedia Nusantara
+            </p>
+            <p className="font-['Montserrat',sans-serif] font-medium text-[#221139] text-[13px] md:text-[16px] text-center">
+              Be part of Indonesia's largest hackathon
+            </p>
+          </div>
+
+          <div className="flex gap-6 items-center justify-center flex-wrap">
+            <a
+              href="#apply"
+              className="bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-medium text-[14px] px-6 py-3 rounded-lg hover:bg-[#8036CB] transition-colors"
+            >
               Apply Now
-            </Link>
+            </a>
+            <a
+              href="#guidebook"
+              className="bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-medium text-[14px] px-6 py-3 rounded-lg hover:bg-[#8036CB] transition-colors"
+            >
+              Guide Book
+            </a>
           </div>
         </div>
       </div>
