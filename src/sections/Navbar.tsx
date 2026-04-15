@@ -18,8 +18,8 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#F9F5FF] border-b border-[#C4A9FF] sticky top-0 z-50">
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border border-r-[#C4A9FF] border-l-[#C4A9FF]">
-        <div className="flex items-center justify-between py-3 px-6 border border-r-[#C4A9FF] border-l-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
+        <div className="flex items-center justify-between py-3 px-6 border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
    
           <div className="flex items-center justify-center w-8 h-8 overflow-hidden shrink-0">
             <Image 

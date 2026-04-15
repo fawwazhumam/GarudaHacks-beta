@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div className="bg-[#F9F5FF] min-h-screen relative overflow-x-hidden">
 
-      <CubePattern />
       
       <Navbar />
       <Heroes />

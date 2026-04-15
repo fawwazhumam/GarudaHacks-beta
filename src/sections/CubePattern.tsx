@@ -1,7 +1,5 @@
-// Decorative rotated squares at section borders (matches Figma cube-pattern elements)
 export default function CubePattern() {
-  // These appear at the edges of sections as visual dividers
-  // On mobile we hide most of them for cleaner look
+
   const positions = [
     // Left side
     "left-[31px] top-[54px]",
