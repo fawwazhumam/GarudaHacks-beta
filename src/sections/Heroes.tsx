@@ -4,19 +4,19 @@ import Image from "next/image";
 export default function Heroes() {
 
   const points = [
-    // Sudut kiri & kanan atas
+    // buat yg kiri ama atas ye
     { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
     
-    // Titik garis bantu vertikal (152px dari pinggir sesuai kodemu tadi)
+    // buat yg vertikal atas
     { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
     { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
 
-    // Sudut kiri & kanan bawah
+    // buat yang sudut kiri ama atas
     { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     
-    // Titik garis bantu bawah
+    // buat titik garis bawah
     { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
     { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
   ];
@@ -24,7 +24,7 @@ export default function Heroes() {
   return (
     <section className="bg-[#F9F5FF] relative border-b border-[#C4A9FF]">
       
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] ">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF] stripeBg">
         
         <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center gap-6 bg-[#190437]">
           

@@ -27,37 +27,38 @@ body {
   background-size: 12px 12px;
 }
 
+.stripeBg {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 15px,
+    #d1b3ff 15px,
+    #d1b3ff 16px /* Garis setebal 1px */
+  );
+  background-color: #f8f0ff;
+}
+
 @layer utilities {
-  /* 1. Mengatur lebar scrollbar */
+  
   ::-webkit-scrollbar {
-    width: 14px; /* Lebar track utama */
+    width: 14px;
   }
 
-  /* 2. Track (Latar belakang tempat scrollbar berjalan) */
   ::-webkit-scrollbar-track {
     background: transparent;
-    border: 1px solid #C4A9FF; /* Tetap transparan agar bersih */
+    border: 1px solid #C4A9FF;
   }
 
-  /* 3. Thumb (Slider yang kita geser-geser) */
   ::-webkit-scrollbar-thumb {
-    /* Gunakan warna ungu aksen kamu */
     background-color: #8E47D6; 
-    
-    /* Membuat ujungnya membulat/capsule-shape */
     border-radius: 20px; 
-    
-    /* TRIK KUNCI: Membuat thumb terlihat ramping dan 'di dalam' track */
     border: 4px solid transparent; 
-    background-clip: content-box; /* Efek padding */
-    
+    background-clip: content-box;
     transition: background-color 0.2s ease;
   }
 
-  /* 4. Efek saat mouse mengarah (hover) ke thumb */
   ::-webkit-scrollbar-thumb:hover {
-    /* Warna ungu yang lebih gelap/sedikit berbeda */
     background-color: #8036CB; 
-    background-clip: content-box; /* Pastikan padding tetap ada */
+    background-clip: content-box;
   }
 }

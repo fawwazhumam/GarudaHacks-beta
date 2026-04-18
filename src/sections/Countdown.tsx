@@ -10,9 +10,9 @@ interface TimeUnit {
 function CountdownBox({ value, label }: TimeUnit) {
   return (
     <div className="flex flex-col gap-1 items-center">
-      <div className="bg-[rgba(249,245,255,0.2)] p-1 rounded-xl shadow-[0px_4px_8px_0px_rgba(138,56,245,0.18)]">
+      <div className="bg-[rgba(249,245,255,0.2)] backdrop-blur-lg p-1 rounded-xl shadow-[0px_4px_8px_0px_rgba(138,56,245,0.18)]">
         <div className="bg-[#F9F5FF] flex items-center justify-center rounded-lg px-3 py-3 md:px-4 md:py-5">
-          <span className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[#221139] text-[36px] md:text-[50px] lg:text-[64px] tracking-[-2px] leading-none">
+          <span className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#221139] text-[36px] md:text-[50px] lg:text-[64px] tracking-[-2px] leading-none">
             {value}
           </span>
         </div>
@@ -27,8 +27,8 @@ function CountdownBox({ value, label }: TimeUnit) {
 }
 
 export default function CountdownSection() {
-  // Target: July 24, 2026
-  const target = new Date("2026-07-24T00:00:00").getTime();
+  // Target: July 24, 2026 menyesuakan yaww
+  const target = new Date("2026-07-16T00:00:00").getTime();
 
   const getTimeLeft = () => {
     const now = Date.now();
@@ -61,7 +61,7 @@ export default function CountdownSection() {
   return (
     <section className="bg-[#F9F5FF] border-b border-[#C4A9FF]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
-        <div className="border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex gap-3 md:gap-6 items-center justify-center px-6 py-6 flex-wrap">
+        <div className="border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex gap-3 md:gap-6 items-center justify-center px-6 py-6 flex-wrap stripeBg">
           {units.map((unit, i) => (
             <CountdownBox key={unit.label} value={unit.value} label={unit.label} />
           ))}
