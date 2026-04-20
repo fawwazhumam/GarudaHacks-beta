@@ -1,5 +1,6 @@
 "use client";
 
+import CornerCube from "@/components/CornerCube";
 import { useEffect, useState } from "react";
 
 interface TimeUnit {
@@ -29,6 +30,24 @@ function CountdownBox({ value, label }: TimeUnit) {
 export default function CountdownSection() {
   // Target: July 24, 2026 menyesuakan yaww
   const target = new Date("2026-07-16T00:00:00").getTime();
+
+  const points = [
+    // buat yg kiri ama atas ye
+    { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
+    
+    // buat yg vertikal atas
+    { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
+    { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
+
+    // buat yang sudut kiri ama bawah
+    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+    
+    // buat titik garis bantu bawah
+    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
+    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
+  ];
 
   const getTimeLeft = () => {
     const now = Date.now();
@@ -61,7 +80,10 @@ export default function CountdownSection() {
   return (
     <section className="bg-[#F9F5FF] border-b border-[#C4A9FF]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
+        
         <div className="border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex gap-3 md:gap-6 items-center justify-center px-6 py-6 flex-wrap stripeBg">
+          
+          
           {units.map((unit, i) => (
             <CountdownBox key={unit.label} value={unit.value} label={unit.label} />
           ))}

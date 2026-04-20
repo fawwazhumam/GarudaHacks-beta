@@ -1,4 +1,4 @@
-import CornerCube from "./CornerCube";
+import CornerCube from "@/components/CornerCube";
 import Image from "next/image";
 
 export default function Heroes() {
@@ -12,20 +12,19 @@ export default function Heroes() {
     { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
     { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
 
-    // buat yang sudut kiri ama atas
-    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+    // buat yang sudut kiri ama bawah
+    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-100" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     
-    // buat titik garis bawah
+    // buat titik garis bantu bawah
     { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
     { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
   ];
-
   return (
     <section className="bg-[#F9F5FF] relative border-b border-[#C4A9FF]">
       
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF] stripeBg">
-        
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF]">
+
         <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center gap-6 bg-[#190437]">
           
           {points.map((point, i) => (
@@ -62,13 +61,13 @@ export default function Heroes() {
             <div className="flex gap-6 items-center justify-center flex-wrap">
               <a
                 href="#apply"
-                className="bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-medium text-[14px] px-6 py-3 rounded-lg hover:bg-[#8036CB] transition-colors"
+                className="btn-bold bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-medium text-[16px]"
               >
                 Apply Now
               </a>
               <a
                 href="#guidebook"
-                className="bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-medium text-[14px] px-6 py-3 rounded-lg hover:bg-[#8036CB] transition-colors"
+                className="btn-bold bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-medium text-[16px]"
               >
                 Guide Book
               </a>

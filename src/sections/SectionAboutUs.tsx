@@ -1,5 +1,6 @@
 import Image from "next/image";
-import CornerCube from "./CornerCube";
+import CornerCube from "@/components/CornerCube";
+import { AboutData } from "@/Data/data";
 
 export default function SectionAboutUs() {
   const points = [
@@ -50,13 +51,7 @@ export default function SectionAboutUs() {
             </div>
             <div className="px-3 py-1">
               <p className="font-['Montserrat',sans-serif] font-medium text-[#221139] text-[13px] md:text-[15px] lg:text-[16px] text-justify leading-relaxed">
-                We are a 501c3 nonprofit dedicated to empowering young Indonesians with the skills
-                and motivation to solve the country's most urgent issues. Despite their skill and
-                ideas, many talented programmers lack the resources to succeed in the job market as
-                a result, we began our organization in 2020, launching our first hackathon online.
-                Since then, we have hosted SEA's largest hackathons for five years consecutively and
-                have helped thousands of students develop in both computer science and
-                entrepreneurship.
+                {AboutData[0].description}
               </p>
             </div>
           </div>

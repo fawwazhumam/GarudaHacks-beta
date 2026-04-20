@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import CornerCube from "./CornerCube";
+import CornerCube from "@/components/CornerCube";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -75,7 +75,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
             <div className="hidden md:flex items-center">
               <a
                 href="#apply"
-                className="bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-medium text-[14px] px-6 py-2 rounded-lg hover:bg-[#8036CB] transition-colors whitespace-nowrap"
+                className="btn-bold"
               >
                 Apply Now
               </a>
@@ -107,7 +107,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
 
       {/* 3. BOTTOM SHEET MENU */}
       <div
-        className={`md:hidden fixed bottom-0 left-0 right-0 z-[110] bg-[#F9F5FF] border-t border-[#C4A9FF] rounded-t-[24px] shadow-2xl transition-transform duration-300 ease-out p-6 ${
+        className={`md:hidden fixed bottom-0 left-0 right-0 z-[110] bg-[#F9F5FF] border-t border-[#C4A9FF] rounded-t-[4px] shadow-2xl transition-transform duration-300 ease-out p-6 ${
           mobileOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
@@ -121,7 +121,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
               key={link.label}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="px-4 py-4 font-['Montserrat',sans-serif] font-medium text-[#221139] text-[18px] border-b border-gray-100 active:bg-purple-50 transition-colors"
+              className="px-4 py-4 font-['Montserrat',sans-serif] font-medium text-[#221139] text-[16px] border-b border-gray-100 active:bg-purple-50 transition-colors"
             >
               {link.label}
             </a>
@@ -129,7 +129,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
           <a
             href="#apply"
             onClick={() => setMobileOpen(false)}
-            className="mt-6 bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-bold text-[16px] px-6 py-4 rounded-xl hover:bg-[#8036CB] transition-colors text-center shadow-lg shadow-purple-200"
+            className="mt-6 bg-[#8E47D6] text-[#F9F5FF] font-['Montserrat',sans-serif] font-bold text-[14px] px-6 py-4 rounded-xl hover:bg-[#8036CB] transition-colors text-center shadow-lg shadow-purple-200"
           >
             Apply Now
           </a>

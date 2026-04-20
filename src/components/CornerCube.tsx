@@ -3,6 +3,7 @@ interface CornerCubeProps {
 }
 
 export default function CornerCube({ className = "" }: CornerCubeProps) {
+
   return (
     <div
       className={`absolute flex items-center justify-center w-5 h-5 pointer-events-none z-60 ${className}`}>
