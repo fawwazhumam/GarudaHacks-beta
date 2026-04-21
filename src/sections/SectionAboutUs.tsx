@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import CornerCube from "@/components/CornerCube";
 import { AboutData } from "@/Data/data";
+import { motion } from "framer-motion";
 
 export default function SectionAboutUs() {
   const points = [
@@ -22,13 +25,52 @@ export default function SectionAboutUs() {
   ];
 
   return (
-    <section id="about" className="bg-[#F9F5FF] relative border-b border-[#C4A9FF]">
+    <section id="about" className="relative border-b border-[#C4A9FF]">
+
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-[20]">
+        <div className="mx-auto max-w-[1440px] relative h-full">
+          <div className="absolute -left-[128px] top-[20%] w-[250px] h-[450px] overflow-hidden hidden lg:block">
+            <motion.div
+              initial={{ x: 200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative w-full h-full"
+            >
+              <Image
+                src="/image/garudie.png"
+                alt="garudie"
+                fill
+                sizes="180px"
+                className="object-contain scale-x-[-1]"
+              />
+            </motion.div>
+          </div>
+          <div className="absolute -right-[128px] top-[20%] w-[250px] h-[450px] overflow-hidden hidden lg:block">
+            <motion.div
+              initial={{ x: -200, opacity: 0 }} 
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative w-full h-full"
+            >
+              <Image
+                src="/image/garudie.png"
+                alt="garudie kanan"
+                fill
+                sizes="180px"
+                className="object-contain" 
+              />
+            </motion.div>
+          </div>
+        </div>
+      </div>
       
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] stripeBg">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
         {points.map((point, i) => (
               <CornerCube key={i} className={point.pos} />
             ))}
-        <div className="flex flex-col bg-[#F9F5FF] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] md:flex-row gap-6 items-start px-6 py-[60px] md:py-[80px] lg:py-[120px]">
+        <div className="bg-[#F5F0FF] flex flex-col border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] md:flex-row gap-6 items-start px-6 py-[60px] md:py-[80px] lg:py-[120px]">
    
           <div className="border border-[#C4A9FF] rounded-lg p-3 flex items-center justify-center relative shrink-0 self-center md:self-auto w-full md:w-auto md:min-w-[260px] lg:min-w-[365px] shadow-[inset_2px_4px_18px_0px_rgba(196,169,255,0.64)]">
             <div className="flex items-center justify-center overflow-hidden w-full h-full">

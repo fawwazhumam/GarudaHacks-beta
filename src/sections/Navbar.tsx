@@ -41,7 +41,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
       <nav className={`bg-[#F9F5FF] w-full border-b border-[#C4A9FF] top-0 right-0 z-[100] fixed ${className}`}>
         <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
           {points.map((point, i) => (
-            <CornerCube key={i} 
+            <CornerCube key={i}
               className={`${point.pos} pointer-events-none`} />
             ))}
           <div className="flex items-center justify-between py-3 px-6 border-x border-[#C4A9FF] relative">

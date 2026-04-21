@@ -24,7 +24,7 @@ export default function Heroes() {
     <section className="bg-[#F9F5FF] relative border-b border-[#C4A9FF]">
       
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF]">
-
+      
         <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center gap-6 bg-[#190437]">
           
           {points.map((point, i) => (
@@ -36,7 +36,7 @@ export default function Heroes() {
               src="/image/HeroesCover.png" 
               alt="Background Grid" 
               width={1440} 
-              height={900}
+              height={840}
               className="w-full h-auto"
               priority 
             />
