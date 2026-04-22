@@ -5,10 +5,10 @@ import Navbar from "@/sections/Navbar";
 import SectionAboutUs from "@/sections/SectionAboutUs";
 import Heroes from "@/sections/Heroes";
 import GarudaByTheNumbers from "@/sections/GarudaByTheNumbers";
-import { Space_Grotesk } from "next/font/google";
 import Spacing1 from "@/sections/SpaceHeader1";
 import Spacing2 from "@/sections/SpaceHeader2";
 import CarrouselGithub from "@/sections/CarrouselGithub";
+import ProjectShowcase from "@/sections/Projects";
 
 export default function Home() {
   return (
@@ -21,6 +21,7 @@ export default function Home() {
       <Spacing2 />
       <GarudaByTheNumbers />
       <CarrouselGithub />
+      <ProjectShowcase />
       <Footer />
     </div>
   );

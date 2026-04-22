@@ -4,16 +4,16 @@ import CornerCube from "@/components/CornerCube";
 export default function GarudaByTheNumbers() {
     const points = [
     // buat yg kiri ama atas ye
-    { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
-    { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
+    { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
     
     // buat yg vertikal atas
     { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
     { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
 
     // buat yang sudut kiri ama bawah
-    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
-    { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex" },
+    { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex" },
     
     // buat titik garis bantu bawah
     { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
