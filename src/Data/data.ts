@@ -14,7 +14,8 @@ export const byTheNumbers = [
     {
         title: "Prize",
         number: "100",
-        description: "Million IDR \n Total Prize Pool"
+        unit: "Million IDR",
+        description: "Total Prize Pool"
     },
     {
         title: "Projects",
@@ -41,37 +42,47 @@ export const contributors = [
 export const projects = [
   {
     title: "HijauKita",
+    number: "01",
     description:
-      "HijauKita is an app designed to encourage community participation in sustainability activities in Indonesia. It addresses environmental and social challenges by providing information on SDGs activities like tree planting and waste collection.",
-    image: "/assets/projects/hijaukita.webp",
+      "HijauKita is an app designed to encourage community participation in sustainability activities in Indonesia",
+    image: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/540/627/datas/original.jpg",
     link: "https://devpost.com/software/hijaukita?_gl=1*o9r3wd*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzAxODkuMC4wLjA.",
+    teamName: "team name"
   },
   {
     title: "Aspiring AI",
+    number: "02",
     description:
-      "Aspiring AI is an AI-powered platform that helps students create a compelling tech portfolio in 15 minutes, giving them a better chance to land their dream tech internship. It uses AI to write the portfolio text and convert profiles into professional pages",
-    image: "/assets/projects/aspiringAI.webp",
+      "Aspiring AI is an AI-powered platform that helps students create a compelling tech portfolio in 15 minutes...",
+    image: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/540/256/datas/original.jpg",
     link: "https://devpost.com/software/p-lbraso?_gl=1*8furrd*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzA2NTAuMC4wLjA.",
+    teamName: "team name"
   },
   {
     title: "Jendela",
+    number: "03",
     description:
-      "Jendela helps ex-convicts find jobs by connecting them with training centers and business partners, providing skills like cooking, makeup, and barista, offering a new start.",
-    image: "/assets/projects/jendela.webp",
+      "Jendela helps ex-convicts find jobs by connecting them with training centers and business partners...",
+    image: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/950/263/datas/original.png",
     link: "https://devpost.com/software/jendela?_gl=1*837o5i*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzA2NTEuMC4wLjA.",
+    teamName: "team name"
   },
   {
     title: "JalanKami",
+    number: "04",
     description:
-      "JalanKami is a platform improving urban walkability by providing tools like an interactive map, a forum for reporting infrastructure issues, an area summarizer for insights, and a sidewalk detection tool for gauging accessibility",
-    image: "/assets/projects/jalankami.webp",
+      "JalanKami is a platform improving urban walkability by providing tools like an interactive map...",
+    image: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/949/694/datas/original.png",
     link: "https://devpost.com/software/jalankami",
+    teamName: "team name"
   },
   {
     title: "IRiS",
+    number: "05",
     description:
-      "IRIS is an innovative application designed to provide comprehensive security and user convenience, utilizing the latest advancements in AI",
-    image: "/assets/projects/iris.webp",
+      "IRIS is an innovative application designed to provide comprehensive security and user convenience...",
+    image: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/950/385/datas/original.png",
     link: "https://devpost.com/software/iris-fprvg9?_gl=1*1cfsuv2*_gcl_au*MTY0MTk2NDAyMi4xNzQyNDQ3NTU2*_ga*MTQzNzAyNDA1LjE3NDI0NDc1NTY.*_ga_0YHJK3Y10M*MTc0NDM1NTg0Ni4yLjEuMTc0NDM1NTg1MC4wLjAuMA..",
+    teamName: "team name"
   },
 ];

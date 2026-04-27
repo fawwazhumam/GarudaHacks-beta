@@ -82,10 +82,16 @@ export default function CountdownSection() {
   ];
 
   return (
-    <section className="bg-[#F9F5FF] border-b border-[#C4A9FF]">
+    <section className="bg-[#F9F5FF] border-b border-[#C4A9FF] relative">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
+        
         <div className="border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex gap-2 md:gap-6 items-center justify-center px-6 py-6 flex-wrap stripeBg">
-          
+          {points.map((point, i) => (
+                    <CornerCube
+                      key={i}
+                      className={`${point.pos} pointer-events-none`}
+                    />
+                  ))}
           {units.map((unit, i) => (
             <CountdownBox
               key={unit.label}

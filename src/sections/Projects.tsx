@@ -1,106 +1,105 @@
 "use client";
 
 import { projects } from "@/Data/data";
-
-interface SlideCard {
-  title: string;
-  description: string;
-  author: string;
-  year?: string;
-  imageSrc?: string;
-}
-
-const defaultCards: SlideCard[] = [
-  {
-    title: "Hook 1",
-    description: "Simple description here, maximum 100 word can be perfect",
-    author: "Fawwaz humam",
-    year: "2025",
-  },
-  {
-    title: "Hook 1",
-    description: "Simple description here, maximum 100 word can be perfect",
-    author: "Fawwaz humam",
-    year: "2025",
-  },
-  {
-    title: "Hook 1",
-    description: "Simple description here, maximum 100 word can be perfect",
-    author: "Fawwaz humam",
-    year: "2025",
-  },
-];
-
-interface SlideCardProps {
-  className?: string;
-  cards?: SlideCard[];
-}
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import CornerCube from "@/components/CornerCube";
 
 export default function ProjectShowcase({
-  className = "",
-  cards = defaultCards,
-}: SlideCardProps) {
+  className = " ",
+  cards = projects,
+}: {
+  className?: string;
+  cards?: any[];
+}) {
+  const infiniteCard = [...cards, ...cards];
+
+  const points = [
+    // buat yg kiri ama atas ye
+    { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
+
+    // buat yg vertikal atas
+    {
+      pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]",
+    },
+    {
+      pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]",
+    },
+
+    // buat yang sudut kiri ama bawah
+    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+
+    // buat titik garis bantu bawah
+    {
+      pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]",
+    },
+    {
+      pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]",
+    },
+  ];
+
   return (
-    <section
-      className={`w-full bg-gray-50 border-t border-gray-100 ${className}`}>
-      <div className="max-w-[1216px] mx-auto px-5 md:px-8 py-10 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-3 rounded-xl border border-gray-400 bg-gray-50 overflow-hidden hover:bg-gray-100 transition-colors group cursor-pointer">
-              <div className="w-full aspect-[4/3] bg-gray-100 border-b border-gray-400 flex items-center justify-center">
-                {card.imageSrc ? (
-                  <img
-                    src={card.imageSrc}
-                    alt={card.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-9 h-9 rounded-lg bg-gray-200 flex items-center justify-center">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="black"></svg>
+    <>
+      <section
+        className={`w-full bg-[#F9F5FF] ${className} border-x border-[#C4A9FF] relative`}
+      >
+        {points.map((point, i) => (
+          <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
+        ))}
+        <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
+          <div className="border-x border-[#C4A9FF] py-12">
+            <div className="relative flex w-full overflow-hidden">
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#F9F5FF] to-transparent z-20"></div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#F9F5FF] to-transparent z-20"></div>
+              <div className="flex gap-12 md:gap-8 w-max animate-infinite-scroll hover:[animation-play-state:paused]">
+                {infiniteCard.map((card, index) => (
+                  <div
+                    key={index}
+                    className="relative group shrink-0 w-[300px] md:w-[380px] mb-10"
+                  >
+                    <div className="bg-[#f9f5ff] rounded-[8px] pb-12 p-6 shadow-sm flex flex-col gap-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                      <div className="flex justify-between items-center">
+                        <h3 className="font-['Montserrat', sans-serif] font-bold text-[16px] text-[#221139]">
+                          {card.title}
+                        </h3>
+                        <span className="font-['Montserrat', sans-serif] font-medium text-[16px] text-[#221139]">
+                          {card.number}
+                        </span>
+                      </div>
+
+                      <div className="w-full aspect-[4/3] rounded-[6px] overflow-hidden bg-[#221139]">
+                        {card.image ? (
+                          <img
+                            src={card.image}
+                            alt={card.title}
+                            className=" w-full h-full object-cover grayscale-[0.5] group-hocer:grayscale-0 transition-all duration-500"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-[#F9F5FF]" />
+                        )}
+                      </div>
+
+                      <p className="font-['Montserrat', sans-serif] font-medium text-[#221139] leading-relaxed">
+                        {card.description}
+                      </p>
+                    </div>
+
+                    <div className="absolute -bottom-4 left-6">
+                      <button className="flex items-center gap-2 bg-[#ad87ff] hover:bg-[#8e47d6] text-white px-6 py-3 rounded-[8px] shadow-lg shadow-purple-200 transition-all active:scale-95 group/btn">
+                        <span className="font-['Montserrat', sans-serif] font-semibold text-[16px]">
+                          {card.teamName}
+                        </span>
+                        <ArrowRightIcon className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                      </button>
                     </div>
                   </div>
-                )}
-              </div>
-
-              <div className="flex flex-col gap-2.5 px-4 pb-4">
-                <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold text-[16px] text-gray-600 group-hover:text-gray-800 transition-colors">
-                  {projects[0].title}
-                </h3>
-                <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[14px] text-gray-600 leading-relaxed">
-                  {projects[0].description}
-                </p>
-
-                <div className="flex items-center justify-between pt-4 border-t border-gray-400">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full bg-gray-200 border border-gray-400 flex items-center justify-center shrink-0">
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 10 10"
-                        fill="white"></svg>
-                    </div>
-                    <span className="font-['PLus-Jakarta_Sans',sans-serif] text-[14px] text-gray-800">
-                      {card.author}
-                    </span>
-                  </div>
-                  {card.year && (
-                    <span className="text-[14px] text-gray-800 font-mono">
-                      {card.year}
-                    </span>
-                  )}
-                </div>
+                ))}
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

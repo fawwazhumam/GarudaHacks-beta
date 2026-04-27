@@ -5,37 +5,17 @@ import CornerCube from "@/components/CornerCube";
 export default function CarrouselGithub() {
     const doubleContributors = [...contributors, ...contributors];
 
-    const points = [
-    // buat yg kiri ama atas ye
-    { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
-    { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
-    
-    // buat yg vertikal atas
-    { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
-    { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
-
-    // buat yang sudut kiri ama bawah
-    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex" },
-    { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex" },
-    
-    // buat titik garis bantu bawah
-    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
-    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
-  ];
-
     return (
-        <section className="w-full border-t border-t-[#C4A9FF] border-b border-b-[#C4A9FF] bg-[#F9F5FF] overflow-hidden">
-            <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
+        <section className="w-full bg-[#F9F5FF] overflow-hidden">
+            <div className="">
                 
-                <div className="border-x border-[#C4A9FF] py-4">
+                <div className="py-4">
                     
-
                     {/* Carousel Container */}
                     <div className="relative flex w-full overflow-hidden">
                         {/* Wrapper Animasi */}
                         <div className="flex w-max animate-infinite-scroll hover:[animation-play-state:paused] py-2">
                            
-                            
                             {doubleContributors.map((username, index) => (
                                 <div 
                                     key={index} 
