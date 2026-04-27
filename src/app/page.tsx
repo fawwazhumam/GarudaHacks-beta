@@ -6,8 +6,6 @@ import SectionAboutUs from "@/sections/SectionAboutUs";
 import Heroes from "@/sections/Heroes";
 import GarudaByTheNumbers from "@/sections/GarudaByTheNumbers";
 import Spacing1 from "@/sections/SpaceHeader1";
-import Spacing2 from "@/sections/SpaceHeader2";
-import CarrouselGithub from "@/sections/CarrouselGithub";
 import ProjectShowcase from "@/sections/Projects";
 
 export default function Home() {
@@ -18,9 +16,7 @@ export default function Home() {
       <Countdown />
       <Spacing1 />
       <SectionAboutUs />
-      <Spacing2 />
       <GarudaByTheNumbers />
-      <CarrouselGithub />
       <ProjectShowcase />
       <Footer />
     </div>

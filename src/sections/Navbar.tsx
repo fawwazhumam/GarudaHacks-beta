@@ -23,12 +23,8 @@ export default function Navbar({ className = "" }: { className?: string }) {
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
 
     // buat titik garis bawah
-    {
-      pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]",
-    },
-    {
-      pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]",
-    },
+    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]"},
+    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]"},
   ];
 
   // Efek Anti-Scroll

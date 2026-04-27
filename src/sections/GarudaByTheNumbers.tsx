@@ -1,45 +1,55 @@
 import { byTheNumbers } from "@/Data/data";
-import CornerCube from "@/components/CornerCube";
+import Image from "next/image";
+import CarrouselGithub from "../components/CarrouselGithub";
 
 export default function GarudaByTheNumbers() {
-    const points = [
-    // buat yg kiri ama atas ye
-    { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
-    { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
-    
-    // buat yg vertikal atas
-    { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
-    { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
-
-    // buat yang sudut kiri ama bawah
-    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex" },
-    { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex" },
-    
-    // buat titik garis bantu bawah
-    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
-    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
-    ];
-
-    return (
-        <section className={`w-full border-t border-gray-50`}>
-            <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
-                <div className="border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] grid grid-cols-1 items-stretch gap-4 md:grid-cols-3 p-4">
-                
-                {byTheNumbers.map((item, index) => (
-                    <div
-                        key={index}
-                        className="flex flex-col border whitespace-pre-line border-[#C4A9FF] rounded-[8px] py-2 md:py-4 px-4 md:px-8">
-                        <h3 className="font-['Monttserat',sans-serif] font-semibold text-[64px] text-[#8E47D6] leading-none">
-                            {item.number}
-                        </h3>
-                  
-                        <p className="font-['Montserat',sans-serif] font-medium text-[16px] text-gray-600 leading-relaxed">
-                            {item.description}
-                        </p>
-                    </div>
-                ))}
+  return (
+    <section className="w-full bg-[#F9F5FF] border-b border-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
+        <div className="relative py-[60px] md:py-[80px] lg:py-[120px] border-x border-[#C4A9FF]">
+          <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 p-12">
+            <h3 className="text-[#221139] md:col-span-3 text-center font-semibold text-[20px] md:text-[26px] lg:text-[32px]">
+              Garuda Hacks by the numbers
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+            {byTheNumbers.map((item, index) => (
+              <div
+                key={index}
+                // overflow-hidden wajib supaya koin gak keluar dari card
+                className="relative flex flex-col justify-between min-h-[200px] border border-[#C4A9FF] rounded-[12px] p-6 bg-[#F9F5FF] overflow-hidden group"
+              >
+                {/* Konten Teks */}
+                <div className="relative z-10">
+                  <h3 className="font-['Montserrat',sans-serif] font-bold text-[84px] text-[#221139] leading-none tracking-tighter">
+                    {item.number}
+                  </h3>
                 </div>
-            </div>
-        </section>
-    )
+
+                <div className="relative z-10 mt-4">
+                  <p className="font-['Montserrat',sans-serif] font-semibold text-[18px] text-[#221139] leading-tight">
+                    {item.unit || "Million IDR"} <br />
+                    <span className="font-medium opacity-70">
+                      {item.description}
+                    </span>
+                  </p>
+                </div>
+
+                {/* Masking Background Coin */}
+                <div className="absolute -right-4 -bottom-6 w-[180px] h-[180px] opacity-40 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-500 pointer-events-none">
+                  <Image
+                    src="/image/ghCoin.svg" // Pastikan path benar
+                    alt="Coin Decoration"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+          <CarrouselGithub />
+        </div>
+      </div>
+    </section>
+  );
 }
