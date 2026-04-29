@@ -48,7 +48,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
             />
           ))}
           <div className="flex items-center justify-between py-3 px-6 border-x border-[#C4A9FF] relative">
-            {/* Logo - PERBAIKAN 2: Hilangkan w-8 h-8 agar logo tidak terpotong */}
+   
             <div className="flex items-center h-8 shrink-0">
               <Image
                 src="/image/GambarLogoGarudaHitam.png"
@@ -60,7 +60,6 @@ export default function Navbar({ className = "" }: { className?: string }) {
               />
             </div>
 
-            {/* Nav Links Desktop */}
             <div className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => (
                 <a
@@ -73,14 +72,12 @@ export default function Navbar({ className = "" }: { className?: string }) {
               ))}
             </div>
 
-            {/* Apply Button Desktop */}
             <div className="hidden md:flex items-center">
               <a href="#apply" className="btn-bold">
                 Apply Now
               </a>
             </div>
 
-            {/* Hamburger Button */}
             <button
               type="button"
               className="md:hidden p-2 text-[#221139]"
@@ -99,7 +96,6 @@ export default function Navbar({ className = "" }: { className?: string }) {
         </div>
       </nav>
 
-      {/* 2. OVERLAY BACKDROP */}
       <div
         onClick={() => setMobileOpen(false)}
         className={`md:hidden fixed inset-0 z-[105] bg-black/20 backdrop-blur-[2px] transition-opacity duration-300 ${
@@ -109,7 +105,6 @@ export default function Navbar({ className = "" }: { className?: string }) {
         }`}
       />
 
-      {/* 3. BOTTOM SHEET MENU */}
       <div
         className={`md:hidden fixed bottom-0 left-0 right-0 z-[110] bg-[#F9F5FF] rounded-t-[12px] shadow-2xl transition-transform duration-300 ease-out px-6 py-2 ${
           mobileOpen ? "translate-y-0" : "translate-y-full"

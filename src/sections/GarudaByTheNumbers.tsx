@@ -16,33 +16,40 @@ export default function GarudaByTheNumbers() {
             {byTheNumbers.map((item, index) => (
               <div
                 key={index}
-                // overflow-hidden wajib supaya koin gak keluar dari card
-                className="relative flex flex-col justify-between min-h-[200px] border border-[#C4A9FF] rounded-[12px] p-6 bg-[#F9F5FF] overflow-hidden group"
+                className="relative flex flex-col justify-between min-h-[200px] border border-[#C4A9FF] rounded-[12px] p-6 bg-[#F9F5FF] group transition-all duration-300 hover:border-[#874FFE] hover:shadow-lg hover:shadow-[#874FFE] group-hover:overflow-visible overflow-hidden"
               >
-                {/* Konten Teks */}
                 <div className="relative z-10">
-                  <h3 className="font-['Montserrat',sans-serif] font-bold text-[84px] text-[#221139] leading-none tracking-tighter">
+                  <h3 className="font-['Montserrat',sans-serif] font-bold text-[72px] md:text-[84px] text-[#221139] leading-none tracking-tighter">
                     {item.number}
                   </h3>
                 </div>
 
                 <div className="relative z-10 mt-4">
                   <p className="font-['Montserrat',sans-serif] font-semibold text-[18px] text-[#221139] leading-tight">
-                    {item.unit || "Million IDR"} <br />
+                    {item.unit} <br />
                     <span className="font-medium opacity-70">
                       {item.description}
                     </span>
                   </p>
                 </div>
 
-                {/* Masking Background Coin */}
-                <div className="absolute -right-4 -bottom-6 w-[180px] h-[180px] opacity-40 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-500 pointer-events-none">
-                  <Image
-                    src="/image/ghCoin.svg" // Pastikan path benar
-                    alt="Coin Decoration"
-                    fill
-                    className="object-contain"
-                  />
+                <div className="absolute -right-4 -bottom-6 w-[180px] h-[180px] pointer-events-none z-0">
+                  <div className="relative w-full h-full opacity-40 group-hover:opacity-100 group-hover:scale-164 group-hover:-rotate-12 transition-all duration-500 ease-out">
+               
+                    <Image
+                      src={`/image/${item.iconBaseName}.svg`}
+                      alt="Decoration Outline"
+                      fill
+                      className="object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+                    />
+
+                    <Image
+                      src={`/image/${item.hoverIcon}.svg`}
+                      alt="Decoration Filled"
+                      fill
+                      className="object-contain absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                    />
+                  </div>
                 </div>
               </div>
             ))}

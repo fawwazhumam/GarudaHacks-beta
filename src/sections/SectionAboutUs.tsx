@@ -78,7 +78,7 @@ export default function SectionAboutUs() {
         {points.map((point, i) => (
           <CornerCube key={i} className={point.pos} />
         ))}
-        <div className="bg-[#F5F0FF] flex flex-col border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] md:flex-row gap-6 items-start px-6 py-[60px] md:py-[80px] lg:py-[120px]">
+        <div className="bg-[#F9F5FF] flex flex-col border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] md:flex-row gap-6 items-start px-6 py-[60px] md:py-[80px] lg:py-[120px]">
           <div className="border border-[#C4A9FF] rounded-lg p-3 flex items-center justify-center relative shrink-0 self-center md:self-auto w-full md:w-auto md:min-w-[260px] lg:min-w-[365px] shadow-[inset_2px_4px_18px_0px_rgba(196,169,255,0.64)]">
             <div className="flex items-center justify-center overflow-hidden w-full h-full">
               <Image

@@ -49,6 +49,11 @@ export default function ProjectShowcase({
         ))}
         <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
           <div className="border-x border-[#C4A9FF] py-12">
+            <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 p-12">
+              <h3 className="text-[#221139] md:col-span-3 text-center font-semibold text-[20px] md:text-[26px] lg:text-[32px]">
+                Project Past
+              </h3>
+            </div>
             <div className="relative flex w-full overflow-hidden">
               <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#F9F5FF] to-transparent z-20"></div>
               <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#F9F5FF] to-transparent z-20"></div>

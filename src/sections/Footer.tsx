@@ -44,11 +44,11 @@ export default function Footer() {
     <footer className="bg-[#8E47D6]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-12 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
         <div className="px-6 py-4 pb-[120px] md:pb-[440px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
-          {/* Columns */}
+     
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 pb-12 pt-2">
             {footerColumns.map((col) => (
               <div key={col.title} className="flex flex-col gap-6">
-                {/* Title */}
+           
                 <div
                   className={`py-2 ${col.isBrand ? "border-r border-[#C4A9FF]" : ""}`}
                 >
@@ -63,7 +63,6 @@ export default function Footer() {
                   </div>
                 </div>
 
-                {/* Links */}
                 <div className="flex flex-col gap-2">
                   {col.links.map((link) => (
                     <div key={link.label} className="flex flex-col">
