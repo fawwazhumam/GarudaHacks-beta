@@ -11,9 +11,9 @@ export default function CarrouselGithub() {
                 
                 <div className="py-4">
                     
-                    {/* Carousel Container */}
+               
                     <div className="relative flex w-full overflow-hidden">
-                        {/* Wrapper Animasi */}
+                 
                         <div className="flex w-max animate-infinite-scroll hover:[animation-play-state:paused] py-2">
                            
                             {doubleContributors.map((username, index) => (
@@ -31,7 +31,7 @@ export default function CarrouselGithub() {
                                         />
                                     </div>
                                     <span className="mt-2 text-[12px] font-['Montserrat',sans-serif] font-medium text-[#AD87FF] group-hover:text-[#8E47D6]">
-                                        {username}
+                                        @{username}
                                     </span>
                                 </div>
                             ))}

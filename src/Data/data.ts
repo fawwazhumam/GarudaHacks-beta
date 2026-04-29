@@ -9,18 +9,24 @@ export const byTheNumbers = [
     {
         title: "partisipants",
         number: "6408",
-        description: "Total Partisipants"
+        description: "Total Partisipants",
+        iconBaseName: "ghCoin",
+        hoverIcon: "GH-coin-fill"
     },
     {
         title: "Prize",
         number: "100",
         unit: "Million IDR",
-        description: "Total Prize Pool"
+        description: "Total Prize Pool",
+        iconBaseName: "ghCoin",
+        hoverIcon: "GH-coin-fill"
     },
     {
         title: "Projects",
         number: "629",
-        description: "Total Projects Submitted"
+        description: "Total Projects Submitted",
+        iconBaseName: "ghCoin",
+        hoverIcon: "GH-coin-fill"
     },
 ]
 

@@ -1,4 +1,5 @@
 import CornerCube from "@/components/CornerCube";
+import TunnelScene from "@/components/TunnelScene";
 import Image from "next/image";
 
 export default function Heroes() {
@@ -33,28 +34,21 @@ export default function Heroes() {
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
-        <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center gap-6 bg-[#190437] p-[120px] relative overflow-hidden">
-          <div className="absolute inset-0">
-            <Image
-              src="/image/HeroesCover.png"
-              alt="Background Grid"
-              fill
-              className="object-cover md:object-fill opacity-80"
-              priority
-            />
+        <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center gap-6 p-[120px] bg-[#F9F5FF] relative overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none bg-[#F9F5FF]">
           </div>
 
           <div className="relative flex flex-col items-center justify-center p-auto gap-auto">
             <div className="flex flex-col items-center justify-center px-12 py-12 md:py-32 gap-4">
-              <h1 className="font-['Montserrat',sans-serif] font-bold text-[#F9F5FF] text-center text-[64px] md:text-[80px] lg:text-[120px] leading-none whitespace-nowrap">
+              <h1 className="font-['Montserrat',sans-serif] font-bold text-[#221139] text-center text-[64px] md:text-[80px] lg:text-[120px] leading-none whitespace-nowrap">
                 Garuda <br className="block md:hidden" /> Hacks 7.0
               </h1>
               <div className="flex flex-col items-center gap-0">
-                <p className="font-['Montserrat',sans-serif] font-medium text-[#F9F5FF] text-[16px] md:text-[18px] text-center">
+                <p className="font-['Montserrat',sans-serif] font-medium text-[#221139] text-[16px] md:text-[18px] text-center">
                   July 24 - 26 | 2026 <br className="block md:hidden" /> at
                   Universitas Multimedia Nusantara
                 </p>
-                <p className="font-['Montserrat',sans-serif] font-medium text-[#F9F5FF] text-[16px] md:text-[18px] text-center">
+                <p className="font-['Montserrat',sans-serif] font-medium text-[#221139] text-[16px] md:text-[18px] text-center">
                   Be part of Indonesia's largest hackathon
                 </p>
               </div>
