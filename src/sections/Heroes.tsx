@@ -4,18 +4,6 @@ import Image from "next/image";
 
 export default function Heroes() {
   const points = [
-    // buat yg kiri ama atas ye
-    { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
-    { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
-
-    // buat yg vertikal atas
-    {
-      pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]",
-    },
-    {
-      pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]",
-    },
-
     // buat yang sudut kiri ama bawah
     { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
@@ -29,14 +17,13 @@ export default function Heroes() {
     },
   ];
   return (
-    <section className="w-full bg-[#F9F5FF] relative border-b border-[#C4A9FF]">
+    <section className="w-full relative border-b border-[#C4A9FF]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF]">
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
-        <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center gap-6 p-[120px] bg-[#F9F5FF] relative overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none bg-[#F9F5FF]">
-          </div>
+        <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center gap-6 p-[120px] relative overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none"></div>
 
           <div className="relative flex flex-col items-center justify-center p-auto gap-auto">
             <div className="flex flex-col items-center justify-center px-12 py-12 md:py-32 gap-4">
