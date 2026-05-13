@@ -4,7 +4,7 @@ import CarrouselGithub from "../components/CarrouselGithub";
 
 export default function GarudaByTheNumbers() {
   return (
-    <section className="w-full bg-[#F9F5FF] border-b border-[#C4A9FF]">
+    <section className="w-full border-b border-[#C4A9FF]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
         <div className="relative py-[60px] md:py-[80px] lg:py-[120px] border-x border-[#C4A9FF]">
           <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 p-12">
@@ -16,7 +16,7 @@ export default function GarudaByTheNumbers() {
             {byTheNumbers.map((item, index) => (
               <div
                 key={index}
-                className="relative flex flex-col justify-between min-h-[200px] border border-[#C4A9FF] rounded-[12px] p-6 bg-[#F9F5FF] group transition-all duration-300 hover:border-[#874FFE] hover:shadow-lg hover:shadow-[#874FFE] group-hover:overflow-visible overflow-hidden"
+                className="relative flex flex-col justify-between min-h-[200px] border border-[#C4A9FF] rounded-[12px] p-6 bg-transparent backdrop-blur-sm group transition-all duration-300 hover:border-[#874FFE] hover:shadow-lg hover:shadow-[#874FFE] group-hover:overflow-visible overflow-hidden"
               >
                 <div className="relative z-10">
                   <h3 className="font-['Montserrat',sans-serif] font-bold text-[72px] md:text-[84px] text-[#221139] leading-none tracking-tighter">
