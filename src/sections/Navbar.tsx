@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+<<<<<<< HEAD
 import CornerCube from "@/components/Cornercube";
+=======
+import CornerCube from "@/components/CornerCube";
+>>>>>>> a96d7a9655b427a07ac05fb5d985db6ff103c5ef
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -18,6 +22,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const points = [
+<<<<<<< HEAD
     // dott bawah
     { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
@@ -27,6 +32,18 @@ export default function Navbar({ className = "" }: { className?: string }) {
     { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]"},
   ];
 
+=======
+    // buat yang sudut kiri ama atas
+    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+
+    // buat titik garis bawah
+    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]"},
+    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]"},
+  ];
+
+  // Efek Anti-Scroll
+>>>>>>> a96d7a9655b427a07ac05fb5d985db6ff103c5ef
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
@@ -37,7 +54,11 @@ export default function Navbar({ className = "" }: { className?: string }) {
   return (
     <>
       <nav
+<<<<<<< HEAD
         className={`bg-[#F9F5FF] w-full border-b border-[#C4A9FF] top-0 right-0 z-[100] fixed ${className}`}
+=======
+        className={`bg-transparent backdrop-blur-lg w-full border-b border-[#C4A9FF] top-0 right-0 z-[100] fixed ${className}`}
+>>>>>>> a96d7a9655b427a07ac05fb5d985db6ff103c5ef
       >
         <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
           {points.map((point, i) => (
@@ -47,6 +68,10 @@ export default function Navbar({ className = "" }: { className?: string }) {
             />
           ))}
           <div className="flex items-center justify-between py-3 px-6 bg-[#F9F5FF] border-x border-[#C4A9FF] relative">
+<<<<<<< HEAD
+=======
+   
+>>>>>>> a96d7a9655b427a07ac05fb5d985db6ff103c5ef
             <div className="flex items-center h-8 shrink-0">
               <Image
                 src="/image/GambarLogoGarudaHitam.png"
@@ -63,7 +88,11 @@ export default function Navbar({ className = "" }: { className?: string }) {
                 <a
                   key={link.label}
                   href={link.href}
+<<<<<<< HEAD
                   className="px-3 py-2 font-medium text-[#221139] text-[16px] hover:text-[#8E47D6] transition-colors whitespace-nowrap"
+=======
+                  className="px-3 py-2 font-['Montserrat',sans-serif] font-medium text-[#221139] text-[14px] hover:text-[#8E47D6] transition-colors whitespace-nowrap"
+>>>>>>> a96d7a9655b427a07ac05fb5d985db6ff103c5ef
                 >
                   {link.label}
                 </a>
@@ -71,10 +100,14 @@ export default function Navbar({ className = "" }: { className?: string }) {
             </div>
 
             <div className="hidden md:flex items-center">
+<<<<<<< HEAD
               <a
                 href="#apply"
                 className="cursor-pointer rounded-[6px] border border-[#7c3aed] bg-[#8e47d6] text-white px-8 py-3 transition-all duration-200 ease-out [box-shadow:inset_0_-1.5px_1px_#8e47d6,inset_0_-6px_1px_#712cb6] hover:translate-y-[1px] hover:[box-shadow:inset_0_4px_4px_#67339c]"
               >
+=======
+              <a href="#apply" className="btn-bold">
+>>>>>>> a96d7a9655b427a07ac05fb5d985db6ff103c5ef
                 Apply Now
               </a>
             </div>
@@ -121,7 +154,11 @@ export default function Navbar({ className = "" }: { className?: string }) {
               key={link.label}
               href={link.href}
               onClick={() => setMobileOpen(false)}
+<<<<<<< HEAD
               className="px-4 py-4 font-medium text-[#221139] text-[16px] border-b border-gray-100 active:bg-purple-50 transition-colors"
+=======
+              className="px-4 py-4 font-['Montserrat',sans-serif] font-medium text-[#221139] text-[16px] border-b border-gray-100 active:bg-purple-50 transition-colors"
+>>>>>>> a96d7a9655b427a07ac05fb5d985db6ff103c5ef
             >
               {link.label}
             </a>
@@ -129,7 +166,11 @@ export default function Navbar({ className = "" }: { className?: string }) {
           <a
             href="#apply"
             onClick={() => setMobileOpen(false)}
+<<<<<<< HEAD
             className="btn-bold font-medium text-[16px] h-14 rounded-xl hover:bg-[#8036CB] transition-colors text-center shadow-lg shadow-purple-200"
+=======
+            className="btn-bold font-['Montserrat',sans-serif] font-medium text-[16px] h-14 rounded-xl hover:bg-[#8036CB] transition-colors text-center shadow-lg shadow-purple-200"
+>>>>>>> a96d7a9655b427a07ac05fb5d985db6ff103c5ef
           >
             Apply Now
           </a>
