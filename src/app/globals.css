@@ -1,25 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9f5ff;
+  --foreground: #221139;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-montserrat: "var(--font-montserrat)";
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #f9f5ff;
-    --foreground: #ededed;
+    --foreground: #f9f5ff;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.78);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat);
 }
 
 .dotBg {
@@ -33,14 +51,14 @@ body {
     transparent,
     transparent 15px,
     #d1b3ff 15px,
-    #d1b3ff 16px /* Garis setebal 1px */
+    #d1b3ff 16px
   );
 }
 
-.btn-bold {
+.btn-custom {
   background: #8e47d6;
   color: white;
-  padding: 8px 24px 12px 24px;
+  padding: 12px 24px 16px 24px;
   border-radius: 6px;
   border: 1px solid #7c3aed;
   z-index: 100;
@@ -51,7 +69,7 @@ body {
   transition: all 0.2s ease;
 }
 
-.btn-bold:hover {
+.btn-custom:hover {
   box-shadow: inset 0 4px 4px #67339c;
   transform: translateY(1px);
 }

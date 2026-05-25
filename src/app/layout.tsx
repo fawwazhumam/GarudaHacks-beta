@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -24,26 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="antialiased scroll-smooth">
-      <body className="relative bg-[#C4A9FF]">
-        <div className="fixed inset-0 -z-20 pointer-events-none">
-          <div className="w-full h-full">
-            <div
-              data-us-project="OqDvSZKn5adaM4IBzsvN"
-              className="absolute w-full h-full left-0 top-0"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-[#F9F5FF] via-transparent to-transparent opacity-80"></div>
-          </div>
-        </div>
-        {children}
-        <Script
-          id="unicorn-studio"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.1.12/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();`,
-          }}
-        />
-      </body>
+    <html
+      lang="en"
+      className="h-full antialiased"
+    >
+      <body className={`${montserrat.variable} font-sans min-h-full flex flex-col`}>{children}</body>
     </html>
   );
 }
